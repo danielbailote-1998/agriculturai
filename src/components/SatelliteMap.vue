@@ -644,9 +644,9 @@ defineExpose({ resizeMap });
   position: absolute;
   top: 10px;
   left: 10px;
-  right: 10px;
+  right: 54px;      /* deixa espaço para os controlos Leaflet à direita */
   z-index: 1000;
-  max-width: 240px;
+  max-width: 100%;
 }
 @media (min-width: 540px) {
   .map-search {
