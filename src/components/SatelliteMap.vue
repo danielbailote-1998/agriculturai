@@ -332,6 +332,12 @@ function nivelAmplitude(res) {
   if (amp < 0.35) return "media";
   return "baixa";
 }
+
+function resizeMap() {
+  if (map) setTimeout(() => map.invalidateSize(), 50);
+}
+defineExpose({ resizeMap });
+
 </script>
 
 <template>

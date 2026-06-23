@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, watch, nextTick } from "vue";
 import HomeScreen from "./components/HomeScreen.vue";
 import WeatherCard from "./components/WeatherCard.vue";
 import DiseaseIdentifier from "./components/DiseaseIdentifier.vue";
@@ -8,6 +8,7 @@ import SatelliteMap from "./components/SatelliteMap.vue";
 import { Home, Camera, CloudSun, MessageSquareText, Satellite, Sprout } from "lucide-vue-next";
 
 const activeView = ref("home");
+const satelliteRef = ref(null);
 
 const tabs = [
   { id: "home",        label: "Início",      icon: Home },
@@ -18,6 +19,12 @@ const tabs = [
 ];
 
 const isChat = () => activeView.value === "chat";
+
+watch(activeView, (val) => {
+  if (val === "satelite") {
+    nextTick(() => satelliteRef.value?.resizeMap());
+  }
+});
 </script>
 
 <template>
@@ -85,7 +92,7 @@ const isChat = () => activeView.value === "chat";
        <div class="page-wrap">
   <HomeScreen        v-if="activeView === 'home'"        @navigate="activeView = $event" />
   <DiseaseIdentifier v-else-if="activeView === 'identificar'" />
-  <SatelliteMap      v-else-if="activeView === 'satelite'" />
+ <SatelliteMap v-else-if="activeView === 'satelite'" ref="satelliteRef" />
   <WeatherCard       v-else-if="activeView === 'tempo'" />
 </div>
       </div>
