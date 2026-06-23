@@ -111,7 +111,7 @@ const stack = [
         <div class="about-avatar">DB</div>
         <div class="about-text">
           <div class="about-name">Daniel Bailote</div>
-          <div class="about-role">Engenheiro Agrónomo · Salesforce Developer na Capgemini Portugal</div>
+          <div class="about-role">Engenheiro Agrónomo · Programador </div>
           <p class="about-desc">
             Construí a Agriculturai para juntar o que aprendi no campo com o que
             aprendo a programar. Mestre em Engenharia Agronómica pela Universidade

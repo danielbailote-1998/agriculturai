@@ -164,7 +164,7 @@ Agriculturai is a **proof-of-concept demo** of AI applied to Portuguese agricult
 
 ## Author
 
-**Daniel Bailote** — Agronomist · Salesforce Developer at Capgemini Portugal
+**Daniel Bailote** — Agronomist · Full Stack Developer
 
 Master's in Agronomic Engineering, University of Évora. Research in soil science and the Montado ecosystem.
 
