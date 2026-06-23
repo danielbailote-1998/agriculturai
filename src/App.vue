@@ -82,12 +82,12 @@ const isChat = () => activeView.value === "chat";
 
       <!-- Páginas com scroll normal -->
       <div v-show="!isChat()" class="scroll-pages">
-        <div class="page-wrap">
-          <HomeScreen        v-if="activeView === 'home'"        @navigate="activeView = $event" />
-          <DiseaseIdentifier v-else-if="activeView === 'identificar'" />
-          <SatelliteMap      v-else-if="activeView === 'satelite'" />
-          <WeatherCard       v-else-if="activeView === 'tempo'" />
-        </div>
+       <div class="page-wrap">
+  <HomeScreen        v-if="activeView === 'home'"        @navigate="activeView = $event" />
+  <DiseaseIdentifier v-else-if="activeView === 'identificar'" />
+  <SatelliteMap      v-else-if="activeView === 'satelite'" />
+  <WeatherCard       v-else-if="activeView === 'tempo'" />
+</div>
       </div>
 
       <!-- Chat: contentor dedicado, sem scroll externo -->
